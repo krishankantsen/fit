@@ -72,7 +72,7 @@ export default function ConsultationPage() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Book Your Consultation</h2>
             <p className="text-lg text-gray-600">
-              Tell us about your project or inquiry, and we'll arrange a time to discuss how we can help.
+              Tell us about your project or inquiry, and we&apos;ll arrange a time to discuss how we can help.
             </p>
           </div>
 

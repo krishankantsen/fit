@@ -57,12 +57,7 @@ export default function ContactPage() {
 
   return (
     <main>
-      <HeroSection
-        title="Get in Touch"
-        subtitle="Contact Us"
-        description="Reach out to discuss your project or inquiries"
-        backgroundImage="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg"
-      />
+      <div className='bg-black h-[80px]'></div>
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

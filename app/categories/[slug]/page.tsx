@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { HeroSection } from '@/components/HeroSection';
-import { ProjectCard } from '@/components/ProjectCard';
-import { ServiceCard } from '@/components/ServiceCard';
-import { Button } from '@/components/ui/button';
-import { CATEGORIES, SERVICES } from '@/lib/constants';
-import { getProjectsByCategory, getServices } from '@/lib/supabase';
-import { notFound } from 'next/navigation';
+import Link from "next/link";
+import { HeroSection } from "@/components/HeroSection";
+import { ProjectCard } from "@/components/ProjectCard";
+import { ServiceCard } from "@/components/ServiceCard";
+import { Button } from "@/components/ui/button";
+import { CATEGORIES, SERVICES } from "@/lib/constants";
+import { getProjectsByCategory, getServices } from "@/lib/supabase";
+import { notFound } from "next/navigation";
 
 interface CategoryPageProps {
   params: {
@@ -24,17 +24,19 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 
   if (!category) {
     return {
-      title: 'Not Found',
+      title: "Not Found",
     };
   }
 
   return {
-    title: `${category.name} | Zenith Architecture`,
+    title: `${category.name} | Design Consultant Architecture`,
     description: category.description,
   };
 }
 
-export default async function CategoryDetailPage({ params }: CategoryPageProps) {
+export default async function CategoryDetailPage({
+  params,
+}: CategoryPageProps) {
   const category = CATEGORIES.find((c) => c.slug === params.slug);
 
   if (!category) {
@@ -55,7 +57,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
         subtitle="Category"
         description={category.description}
         backgroundImage={category.image_url}
-        cta={{ text: 'Request Consultation', href: '/consultation' }}
+        cta={{ text: "Request Consultation", href: "/consultation" }}
       />
 
       <section className="py-20 bg-white">
@@ -68,23 +70,33 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-12">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Key Capabilities</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Key Capabilities
+            </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span className="text-gray-700">Strategic planning and masterplanning</span>
+                <span className="text-gray-700">
+                  Strategic planning and masterplanning
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span className="text-gray-700">Conceptual and detailed design</span>
+                <span className="text-gray-700">
+                  Conceptual and detailed design
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span className="text-gray-700">Project management and coordination</span>
+                <span className="text-gray-700">
+                  Project management and coordination
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span className="text-gray-700">Sustainable design integration</span>
+                <span className="text-gray-700">
+                  Sustainable design integration
+                </span>
               </li>
             </ul>
           </div>
@@ -134,7 +146,11 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
           <p className="text-lg text-blue-100 mb-8">
             Contact our team to discuss how we can help with your next project.
           </p>
-          <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+          <Button
+            asChild
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-gray-100"
+          >
             <Link href="/consultation">Request Consultation</Link>
           </Button>
         </div>

@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { HeroSection } from '@/components/HeroSection';
-import { ServiceCard } from '@/components/ServiceCard';
-import { ProjectCard } from '@/components/ProjectCard';
-import { Button } from '@/components/ui/button';
-import { SERVICES } from '@/lib/constants';
-import { getServices, getProjects } from '@/lib/supabase';
-import { notFound } from 'next/navigation';
+import Link from "next/link";
+import { HeroSection } from "@/components/HeroSection";
+import { ServiceCard } from "@/components/ServiceCard";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Button } from "@/components/ui/button";
+import { SERVICES } from "@/lib/constants";
+import { getServices, getProjects } from "@/lib/supabase";
+import { notFound } from "next/navigation";
 
 interface ServicePageProps {
   params: {
@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: ServicePageProps) {
 
   if (!service) {
     return {
-      title: 'Not Found',
+      title: "Not Found",
     };
   }
 
   return {
-    title: `${service.name} | Zenith Architecture`,
+    title: `${service.name} | Design Consultant Architecture`,
     description: service.description,
   };
 }
@@ -50,8 +50,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         title={service.name}
         subtitle="Our Service"
         description={service.description}
-        backgroundImage="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg"
-        cta={{ text: 'Request Service', href: '/contact' }}
+        backgroundImage="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+        cta={{ text: "Request Service", href: "/contact" }}
       />
 
       <section className="py-20 bg-white">
@@ -64,7 +64,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </p>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-8 rounded mb-12">
-            <h3 className="font-bold text-xl text-gray-900 mb-4">Key Features</h3>
+            <h3 className="font-bold text-xl text-gray-900 mb-4">
+              Key Features
+            </h3>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">✓</span>
@@ -97,7 +99,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </ol>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="font-bold text-lg text-gray-900 mb-3">Deliverables</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-3">
+                Deliverables
+              </h3>
               <ul className="space-y-2 text-gray-600 text-sm">
                 <li>• Comprehensive reports</li>
                 <li>• Technical drawings</li>
@@ -108,7 +112,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-bold text-lg text-gray-900 mb-3">Timeline</h3>
               <p className="text-gray-600 text-sm mb-3">
-                Project duration varies based on scope and complexity. We provide detailed timelines during consultation.
+                Project duration varies based on scope and complexity. We
+                provide detailed timelines during consultation.
               </p>
               <Button asChild variant="outline" size="sm" className="w-full">
                 <Link href="/consultation">Get Timeline</Link>
@@ -154,10 +159,15 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             Ready to Get Started?
           </h2>
           <p className="text-lg text-blue-100 mb-8">
-            Contact our team to discuss how {service.name} can benefit your project.
+            Contact our team to discuss how {service.name} can benefit your
+            project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100"
+            >
               <Link href="/contact">Request Service</Link>
             </Button>
             <Button

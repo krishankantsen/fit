@@ -38,7 +38,7 @@ export default function PortfolioPage() {
         title="Our Portfolio"
         subtitle="Featured Work"
         description="Explore our diverse range of projects and achievements"
-        backgroundImage="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg"
+        backgroundImage="https://images.pexels.com/photos/2731917/pexels-photo-2731917.jpeg"
       />
 
       <section className="py-20 bg-white">

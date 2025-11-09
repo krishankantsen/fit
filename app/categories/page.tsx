@@ -1,10 +1,11 @@
-import { HeroSection } from '@/components/HeroSection';
-import { CategoryCard } from '@/components/CategoryCard';
-import { CATEGORIES } from '@/lib/constants';
+import { HeroSection } from "@/components/HeroSection";
+import { CategoryCard } from "@/components/CategoryCard";
+import { CATEGORIES } from "@/lib/constants";
 
 export const metadata = {
-  title: 'Project Categories | Zenith Architecture',
-  description: 'Explore our expertise across 12 project categories including residential, commercial, education, healthcare, and more.',
+  title: "Project Categories | Design Consultant Architecture",
+  description:
+    "Explore our expertise across 12 project categories including residential, commercial, education, healthcare, and more.",
 };
 
 export default function CategoriesPage() {
